@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>记账流水 · 家计本</title>
+<meta name="description" content="陈家 2026 年 11 月的每一笔收支流水：按分类筛选、按关键字搜索，也可以自己记一笔账。">
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="records.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <h1><a href="index.html">家计本</a></h1>
+      <span class="sub">陈家一家三口的家庭预算 · 山东临沂</span>
+    </div>
+    <nav aria-label="主要栏目">
+      <a href="index.html">总览</a>
+      <a href="budget.html">分类预算</a>
+      <a href="records.html" aria-current="page">记账流水</a>
+      <a href="bills.html">账单提醒</a>
+      <a href="goals.html">储蓄目标</a>
+      <a href="guide.html">预算方法</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="month-switch" role="group" aria-label="选择月份">
+    <button data-month="2026-11" aria-pressed="true">2026 年 11 月</button>
+    <button data-month="2026-10" aria-pressed="false">2026 年 10 月</button>
+  </div>
+  <h2>记账流水 · <span id="monthLabel">2026 年 11 月</span></h2>
+  <p class="lead" id="sumLine">共 43 笔 · 收入 ¥18,500 · 支出 ¥13,847</p>
+
+  <section class="card">
+    <h3>筛选</h3>
+    <div class="form-row">
+      <div>
+        <label for="catFilter">按分类或收支看</label>
+        <select id="catFilter">
+          <option value="all">全部流水</option>
+          <option value="in">只看收入</option>
+          <option value="out">只看支出</option>
+          <option value="food">餐饮伙食</option>
+          <option value="housing">住房房贷</option>
+          <option value="transport">交通出行</option>
+          <option value="edu">孩子教育</option>
+          <option value="daily">日用购物</option>
+          <option value="health">医疗健康</option>
+          <option value="fun">娱乐休闲</option>
+          <option value="utility">通讯水电</option>
+          <option value="clothing">服饰穿戴</option>
+        </select>
+      </div>
+      <div>
+        <label for="searchBox">搜备注、分类或支付方式</label>
+        <input type="text" id="searchBox" placeholder="比如：超市、外卖、微信支付">
+      </div>
+    </div>
+    <table>
+      <thead><tr><th>日期</th><th>分类</th><th>备注</th><th class="hide-mobile">支付方式</th><th class="num">金额</th></tr></thead>
+      <tbody id="recordRows"></tbody>
+    </table>
+    <p class="hint">带“自己记的”的行是你在这台设备上加的流水，存在本机浏览器里。</p>
+  </section>
+
+  <section class="card">
+    <h3>记一笔账</h3>
+    <form id="addForm">
+      <div class="form-row">
+        <div>
+          <label for="fDate">日期</label>
+          <input type="date" id="fDate" value="2026-11-26" required>
+        </div>
+        <div>
+          <label for="fKind">收支</label>
+          <select id="fKind"><option value="out">支出</option><option value="in">收入</option></select>
+        </div>
+        <div>
+          <label for="fCat">分类</label>
+          <select id="fCat"></select>
+        </div>
+        <div>
+          <label for="fAmount">金额（元）</label>
+          <input type="number" id="fAmount" min="1" step="1" placeholder="比如 86" required>
+        </div>
+        <div>
+          <label for="fNote">备注</label>
+          <input type="text" id="fNote" placeholder="比如：菜市场买菜" required>
+        </div>
+        <div>
+          <label for="fMethod">支付方式</label>
+          <select id="fMethod">
+            <option>微信支付</option><option>支付宝</option><option>现金</option>
+            <option>银行卡</option><option>银行转账</option><option>医保卡</option>
+            <option>美团</option><option>银行到账</option>
+          </select>
+        </div>
+      </div>
+      <p><button type="submit">记下来</button> <span id="formMsg" class="hint"></span></p>
+    </form>
+  </section>
+</main>
+<footer class="site"><div class="wrap">
+  家计本 · 数据截至 2026 年 11 月 26 日 · 记账存在本机浏览器，不上传任何地方 ·
+  <a href="index.html">总览</a> · <a href="budget.html">分类预算</a> · <a href="records.html">记账流水</a> ·
+  <a href="bills.html">账单提醒</a> · <a href="goals.html">储蓄目标</a> · <a href="guide.html">预算方法</a>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>账单提醒 · 家计本</title>
+<meta name="description" content="陈家每月的固定账单：房贷、水电燃气、话费宽带、物业、保险和学费，勾选即标记已付，快到期的账单会提醒。">
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="bills.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <h1><a href="index.html">家计本</a></h1>
+      <span class="sub">陈家一家三口的家庭预算 · 山东临沂</span>
+    </div>
+    <nav aria-label="主要栏目">
+      <a href="index.html">总览</a>
+      <a href="budget.html">分类预算</a>
+      <a href="records.html">记账流水</a>
+      <a href="bills.html" aria-current="page">账单提醒</a>
+      <a href="goals.html">储蓄目标</a>
+      <a href="guide.html">预算方法</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h2>账单提醒 · 2026 年 11 月</h2>
+  <p class="lead" id="sumLine">11 月账单共 9 笔 ¥7,428 · 已付 7 笔 ¥5,742 · 待付 2 笔 ¥1,686</p>
+
+  <section class="card">
+    <h3>本月账单</h3>
+    <p class="hint">付完一笔就勾选，状态存在本机；点错了再点一下就能改回来。今天是 11 月 26 日。</p>
+    <table>
+      <thead><tr><th>已付</th><th>账单</th><th class="num">金额</th><th>扣款日</th><th class="hide-mobile">说明</th><th>状态</th></tr></thead>
+      <tbody id="billRows"></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3>加一笔固定账单</h3>
+    <form id="addBillForm">
+      <div class="form-row">
+        <div>
+          <label for="bName">账单名称</label>
+          <input type="text" id="bName" placeholder="比如：燃气费" required>
+        </div>
+        <div>
+          <label for="bAmount">金额（元）</label>
+          <input type="number" id="bAmount" min="1" step="1" placeholder="比如 120" required>
+        </div>
+        <div>
+          <label for="bDay">每月扣款日</label>
+          <input type="number" id="bDay" min="1" max="31" step="1" placeholder="比如 15" required>
+        </div>
+      </div>
+      <p><button type="submit">加上这笔账单</button> <span id="billMsg" class="hint"></span></p>
+    </form>
+  </section>
+
+  <section class="card">
+    <h3>陈家的缴费习惯</h3>
+    <p>房贷、水电燃气、话费都走自动扣款，工资到账当天先把房贷的钱留出来；物业费每月 15 日在小区公众号上交；保险和学费这两笔大额的，提前三天在手机日历上设提醒，28 日重疾险 ¥486、30 日英语班 ¥1,200，别忘了。</p>
+  </section>
+</main>
+<footer class="site"><div class="wrap">
+  家计本 · 数据截至 2026 年 11 月 26 日 · 记账存在本机浏览器，不上传任何地方 ·
+  <a href="index.html">总览</a> · <a href="budget.html">分类预算</a> · <a href="records.html">记账流水</a> ·
+  <a href="bills.html">账单提醒</a> · <a href="goals.html">储蓄目标</a> · <a href="guide.html">预算方法</a>
+</div></footer>
+</body>
+</html>

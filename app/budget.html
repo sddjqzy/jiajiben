@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分类预算 · 家计本</title>
+<meta name="description" content="陈家 9 个分类的月度预算和实际支出：餐饮、房贷、交通、教育、日用、医疗、娱乐、水电通讯、服饰，超支有提醒，预算可以自己调。">
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="budget.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <h1><a href="index.html">家计本</a></h1>
+      <span class="sub">陈家一家三口的家庭预算 · 山东临沂</span>
+    </div>
+    <nav aria-label="主要栏目">
+      <a href="index.html">总览</a>
+      <a href="budget.html" aria-current="page">分类预算</a>
+      <a href="records.html">记账流水</a>
+      <a href="bills.html">账单提醒</a>
+      <a href="goals.html">储蓄目标</a>
+      <a href="guide.html">预算方法</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="month-switch" role="group" aria-label="选择月份">
+    <button data-month="2026-11" aria-pressed="true">2026 年 11 月</button>
+    <button data-month="2026-10" aria-pressed="false">2026 年 10 月</button>
+  </div>
+  <h2>分类预算 · <span id="monthLabel">2026 年 11 月</span></h2>
+  <p class="lead" id="sumLine">预算 ¥15,200 · 已花 ¥13,847 · 剩余 ¥1,353</p>
+
+  <section class="card">
+    <h3>9 个分类的预算和实际</h3>
+    <p class="hint">最后一列可以直接改预算：输完数字点页面其他地方就保存，存在本机，下次打开还在。</p>
+    <table>
+      <thead><tr><th>分类</th><th class="num">预算</th><th class="num">实际</th><th class="num">剩余</th><th class="num">执行率</th><th>调整预算（元）</th></tr></thead>
+      <tbody id="budgetTable"></tbody>
+    </table>
+    <p><button class="ghost" id="resetBudgets" type="button">恢复默认预算</button></p>
+  </section>
+
+  <section class="card">
+    <h3>超支提醒和省钱建议</h3>
+    <div id="advice"></div>
+    <p class="hint">11 月只有孩子教育超支 ¥280：英语班续费和钢琴课撞在同一个月。12 月把教育预算调到 ¥2,400，餐饮压到 ¥3,000 补回来。</p>
+  </section>
+
+  <section class="card">
+    <h3>预算是怎么定的</h3>
+    <p>陈家的预算按 50 / 30 / 20 法则排：月收入 ¥18,500，必要开销控制在 ¥9,250 以内，想要的生活 ¥5,550，先存 ¥3,700。9 个分类加起来 ¥15,200，剩下的 ¥3,300 是机动钱——红白喜事、人情往来、孩子突然要交的费用都从这里出，不动储蓄。</p>
+    <p><a href="guide.html">看 50 / 30 / 20 法则怎么算 →</a></p>
+  </section>
+</main>
+<footer class="site"><div class="wrap">
+  家计本 · 数据截至 2026 年 11 月 26 日 · 记账存在本机浏览器，不上传任何地方 ·
+  <a href="index.html">总览</a> · <a href="budget.html">分类预算</a> · <a href="records.html">记账流水</a> ·
+  <a href="bills.html">账单提醒</a> · <a href="goals.html">储蓄目标</a> · <a href="guide.html">预算方法</a>
+</div></footer>
+</body>
+</html>

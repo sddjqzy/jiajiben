@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>家计本 · 陈家家庭预算总览</title>
+<meta name="description" content="陈家一家三口的家庭预算总览：月收入、月支出、结余、分类预算执行和支出结构，数字来自 2026 年 11 月的真实记账。">
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="charts.js"></script>
+<script src="overview.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <h1><a href="index.html">家计本</a></h1>
+      <span class="sub">陈家一家三口的家庭预算 · 山东临沂</span>
+    </div>
+    <nav aria-label="主要栏目">
+      <a href="index.html" aria-current="page">总览</a>
+      <a href="budget.html">分类预算</a>
+      <a href="records.html">记账流水</a>
+      <a href="bills.html">账单提醒</a>
+      <a href="goals.html">储蓄目标</a>
+      <a href="guide.html">预算方法</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="month-switch" role="group" aria-label="选择月份">
+    <button data-month="2026-11" aria-pressed="true">2026 年 11 月</button>
+    <button data-month="2026-10" aria-pressed="false">2026 年 10 月</button>
+  </div>
+  <h2 id="monthLabel">2026 年 11 月</h2>
+  <p class="lead">先记账，再花钱；每一笔都知道去向。本月收支、预算执行和最近流水都在这一页。</p>
+
+  <div class="grid four">
+    <section class="card stat"><div class="cap">月收入</div><div class="num income" id="statIncome">¥18,500</div><div class="note">工资 ¥17,000 ＋ 副业 ¥1,100 ＋ 理财 ¥400</div></section>
+    <section class="card stat"><div class="cap">月支出</div><div class="num expense" id="statExpense">¥13,847</div><div class="note">39 笔流水加总，分类见下图</div></section>
+    <section class="card stat"><div class="cap">月结余</div><div class="num balance" id="statBalance">¥4,653</div><div class="note">结余率 25.1%，高于 20% 的储蓄线</div></section>
+    <section class="card stat"><div class="cap">预算总额</div><div class="num" id="statBudget">¥15,200</div><div class="note" id="budgetNote">预算执行 91.1%，比预算少花 ¥1,353。</div></section>
+  </div>
+
+  <section class="card">
+    <h3>分类预算执行</h3>
+    <p class="hint">浅色条是预算，深色条是实际支出；超支的分类标红字。</p>
+    <div id="barChart"></div>
+    <p><a href="budget.html">调整各分类预算 →</a></p>
+  </section>
+
+  <div class="grid two">
+    <section class="card">
+      <h3>支出结构</h3>
+      <div class="donut-side">
+        <div id="donutChart"></div>
+        <ul class="legend" id="donutLegend"></ul>
+      </div>
+    </section>
+    <section class="card">
+      <h3>最近 6 笔流水</h3>
+      <table>
+        <thead><tr><th>日期</th><th>分类</th><th>备注</th><th class="num">金额</th></tr></thead>
+        <tbody id="recentList"></tbody>
+      </table>
+      <p><a href="records.html">看全部流水、记一笔账 →</a></p>
+    </section>
+  </div>
+
+  <div class="grid two">
+    <section class="card">
+      <h3>储蓄目标速览</h3>
+      <div id="goalMini"></div>
+      <p><a href="goals.html">去存钱 →</a></p>
+    </section>
+    <section class="card">
+      <h3>待付账单</h3>
+      <div id="billMini"></div>
+    </section>
+  </div>
+
+  <section class="card">
+    <h3>这家人</h3>
+    <table>
+      <thead><tr><th>成员</th><th>姓名</th><th>身份</th><th>收入</th></tr></thead>
+      <tbody>
+        <tr><td>爸爸</td><td>陈明</td><td>物流公司调度员</td><td>月薪 ¥12,800</td></tr>
+        <tr><td>妈妈</td><td>林晓</td><td>社区卫生服务中心护士</td><td>月薪 ¥4,200</td></tr>
+        <tr><td>孩子</td><td>陈小满</td><td>小学三年级</td><td>周末帮妈妈做手工，一起存旅行基金</td></tr>
+      </tbody>
+    </table>
+    <p class="hint">家住 89 平方米两居室，月供 ¥4,500；一辆开了 9 年的家用车，每月油费约 ¥580。</p>
+  </section>
+</main>
+<footer class="site"><div class="wrap">
+  家计本 · 数据截至 2026 年 11 月 26 日 · 记账存在本机浏览器，不上传任何地方 ·
+  <a href="index.html">总览</a> · <a href="budget.html">分类预算</a> · <a href="records.html">记账流水</a> ·
+  <a href="bills.html">账单提醒</a> · <a href="goals.html">储蓄目标</a> · <a href="guide.html">预算方法</a>
+</div></footer>
+</body>
+</html>

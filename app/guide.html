@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>预算方法 · 家计本</title>
+<meta name="description" content="陈家用的家庭预算方法：50 / 30 / 20 分配法、记账三步法、月度复盘清单和省钱技巧，附月收入分配计算器。">
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="guide.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <h1><a href="index.html">家计本</a></h1>
+      <span class="sub">陈家一家三口的家庭预算 · 山东临沂</span>
+    </div>
+    <nav aria-label="主要栏目">
+      <a href="index.html">总览</a>
+      <a href="budget.html">分类预算</a>
+      <a href="records.html">记账流水</a>
+      <a href="bills.html">账单提醒</a>
+      <a href="goals.html">储蓄目标</a>
+      <a href="guide.html" aria-current="page">预算方法</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h2>预算方法</h2>
+  <p class="lead">陈家用下来最顺手的办法：先分钱，再花钱；月底复盘一次，下月微调。</p>
+
+  <section class="card">
+    <h3>50 / 30 / 20 分配法</h3>
+    <p>月收入分成三份：50% 必要开销、30% 想要的生活、20% 先存起来。输进你家的月收入，算一算该怎么分。</p>
+    <div class="form-row">
+      <div>
+        <label for="calcIncome">你家月收入（元）</label>
+        <input type="number" id="calcIncome" min="1" step="100" value="18500">
+      </div>
+      <div>
+        <label>&nbsp;</label>
+        <button id="calcBtn" type="button">算一算</button>
+      </div>
+    </div>
+    <div id="calcResult"></div>
+  </section>
+
+  <section class="card">
+    <h3>记账三步法</h3>
+    <ol>
+      <li><b>花了就记：</b>微信、支付宝的账单每天晚上花 2 分钟对一遍，现金随手记在手机备忘录里，周末统一录进来。</li>
+      <li><b>每周对一次分类：</b>周日晚上看一眼各分类花了多少，快超的分类下周收着点，别等月底才发现。</li>
+      <li><b>月底复盘 15 分钟：</b>对照下面的清单走一遍，超支的分类要么调预算、要么改习惯，二选一，下月执行。</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h3>月度复盘清单</h3>
+    <ul class="checklist">
+      <li>本月结余达到收入的 20% 了吗？没到的话，差额从哪里补？</li>
+      <li>哪个分类超支最多？是预算定低了，还是花超了？</li>
+      <li>有没有连续三个月都没花的分类预算？有就调低，放给更需要的分类。</li>
+      <li>下月有没有大额固定支出（学费、保险、年费）？提前留出来。</li>
+      <li>储蓄目标的钱转走了吗？发工资当天转，别等月底剩。</li>
+      <li>本月最值的一笔花销是什么？最亏的一笔呢？</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>省钱技巧：陈家亲测有效的 6 条</h3>
+    <ol>
+      <li><b>周采购一次列清单：</b>去超市前列好单子、吃饱了再去，冲动消费少一半。</li>
+      <li><b>外卖每周不超过两次：</b>自己做饭一顿约 ¥25，外卖一顿约 ¥45，一家三口每月能省 ¥600。</li>
+      <li><b>日用品大促囤三个月：</b>纸巾、洗衣液、牙膏趁 618、双 11 囤够，别零散买原价。</li>
+      <li><b>水电小习惯：</b>空调 26 度、随手关灯、洗衣机攒满一桶再洗，电费每月降一成。</li>
+      <li><b>孩子课外班一次一门：</b>先试听再缴费，问清退费规则，别一次报满全年。</li>
+      <li><b>亲子活动先看免费的：</b>公园、图书馆、博物馆，孩子照样玩得开心。</li>
+    </ol>
+    <p class="hint">11 月陈家靠这几条比预算少花了 ¥1,353，全部转进了应急金。</p>
+  </section>
+
+  <section class="card">
+    <h3>常见问题</h3>
+    <p><b>预算总超支怎么办？</b>先别自责。连续两个月超支的分类，大概率是预算定低了——调高它，再从别的分类匀回来。预算是工具，不是考试。</p>
+    <p><b>记账坚持不下去怎么办？</b>别追求一笔不落。先记大额的，再补小额的；一周对一次账，比一天记十次更重要。</p>
+    <p><b>月光族从哪里开始？</b>先做一件事：发工资当天把 20% 转到另一张卡。剩下的照常花，一个月后看结余，多数家庭第一个月就能存下钱。</p>
+    <p><b>这里的数据存在哪里？</b>原始记账在本站的文件里；你自己记的流水、改的预算、点的账单和存的钱，只存在你这台设备的浏览器里，不上传任何地方，换设备就看不到了。</p>
+  </section>
+</main>
+<footer class="site"><div class="wrap">
+  家计本 · 数据截至 2026 年 11 月 26 日 · 记账存在本机浏览器，不上传任何地方 ·
+  <a href="index.html">总览</a> · <a href="budget.html">分类预算</a> · <a href="records.html">记账流水</a> ·
+  <a href="bills.html">账单提醒</a> · <a href="goals.html">储蓄目标</a> · <a href="guide.html">预算方法</a>
+</div></footer>
+</body>
+</html>

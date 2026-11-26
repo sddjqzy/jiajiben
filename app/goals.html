@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>储蓄目标 · 家计本</title>
+<meta name="description" content="陈家 4 个储蓄目标的进度：应急金、孩子教育金、换车基金和家庭旅行，点一下就能存一笔钱。">
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="goals.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <h1><a href="index.html">家计本</a></h1>
+      <span class="sub">陈家一家三口的家庭预算 · 山东临沂</span>
+    </div>
+    <nav aria-label="主要栏目">
+      <a href="index.html">总览</a>
+      <a href="budget.html">分类预算</a>
+      <a href="records.html">记账流水</a>
+      <a href="bills.html">账单提醒</a>
+      <a href="goals.html" aria-current="page">储蓄目标</a>
+      <a href="guide.html">预算方法</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h2>储蓄目标</h2>
+  <p class="lead" id="sumLine">4 个目标共需 ¥168,000，已存 ¥57,200，整体完成 34%。</p>
+
+  <div id="goalList"></div>
+
+  <section class="card">
+    <h3>陈家的存钱办法</h3>
+    <p>发工资当天先转走 ¥3,700 到专用存钱卡，剩下的才花。应急金最先存满——够 3 个月开销，家里出什么事都不慌；教育金每月固定 ¥1,500；换车基金每月 ¥800，攒够 8 万再换车，不贷款；旅行基金是小满最上心的，每周攒下的零花钱也往里放。</p>
+    <p><button class="ghost" id="resetGoals" type="button">清空全部个人改动（恢复原始数字）</button></p>
+    <p class="hint">点“存钱”加的金额存在本机浏览器里；“清空”会同时清掉记账、账单和预算的全部个人改动。</p>
+  </section>
+</main>
+<footer class="site"><div class="wrap">
+  家计本 · 数据截至 2026 年 11 月 26 日 · 记账存在本机浏览器，不上传任何地方 ·
+  <a href="index.html">总览</a> · <a href="budget.html">分类预算</a> · <a href="records.html">记账流水</a> ·
+  <a href="bills.html">账单提醒</a> · <a href="goals.html">储蓄目标</a> · <a href="guide.html">预算方法</a>
+</div></footer>
+</body>
+</html>
